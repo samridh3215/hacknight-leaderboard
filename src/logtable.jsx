@@ -77,11 +77,11 @@ const Scores = (props) => {
   };
 
   return (
-    <>
+    <div>
       <button className="toggleSort" onClick={sortArray}>
         Toggle sort &#8593; &#8595;
       </button>
-      <table align="center">
+      <table  className="darkTable" align="center">
         <thead>
           <tr>
             <th> Position </th>
@@ -92,6 +92,7 @@ const Scores = (props) => {
         <tbody>
           {scores &&
             scores.map((score, index) => {
+              if(index<25){
               return (
                 <tr key={score.contributor}>
                   <td> {index + 1} </td>
@@ -99,10 +100,34 @@ const Scores = (props) => {
                   <td> {score.score} </td>
                 </tr>
               );
-            })}
+          }})}
+            
         </tbody>
       </table>
-    </>
+      <table  className="darkTable" align="center">
+        <thead>
+          <tr>
+            <th> Position </th>
+            <th> Contributor </th>
+            <th> Bounty </th>
+          </tr>
+        </thead>
+        <tbody>
+          {scores &&
+            scores.map((score, index) => {
+              if(index>24 && index<50){
+              return (
+                <tr key={score.contributor}>
+                  <td> {index + 1} </td>
+                  <td> {score.contributor} </td>
+                  <td> {score.score} </td>
+                </tr>
+              );
+          }})}
+            
+        </tbody>
+      </table>
+    </div>
   );
 };
 export default Scores;

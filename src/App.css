@@ -1,40 +1,27 @@
+body{
+  background-color: rgb(32, 43, 56) ;
+}
 .App {
   text-align: center;
     font-family: 'Share Tech Mono', monospace;
     font-size: 1.1em;
+  width: 500px;
+  position: relative;
+  float: right;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+img{
+  height:300px;
+  width:600px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1{
+  display: inline-block;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.hn-info{
+  width: 600px;
+  position: absolute;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
